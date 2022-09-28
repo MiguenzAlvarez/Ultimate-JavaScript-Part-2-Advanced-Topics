@@ -59,3 +59,30 @@ function Circle(radius) {
  
 const circle = new Circle(10);
 circle.draw(); //you cant call that propertie from the outside*/
+
+/*GETTERS AND SETTER:
+
+function Circle(radius) {
+  this.radius = radius;
+
+  let defaultLocation = { x: 0, y: 0 };
+
+  this.draw = function () {
+    console.log("draw");
+  };
+
+  Object.defineProperty(this, "defaultLocation", {
+    get: function () {
+      return defaultLocation;
+    },
+    set: function (value) {
+      if (!value.x || !value.y) throw new Error("Invalid location.");
+
+      defaultLocation = value;
+    },
+  });
+}
+
+const circle = new Circle(10);
+circle.defaultLocation = 0;
+circle.draw();*/
